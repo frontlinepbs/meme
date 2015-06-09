@@ -41,7 +41,7 @@ var MEME_SETTINGS = {
     {text: 'Align right', value: 'right'}
   ],
 
-  textShadow: false, // Text shadow toggle.
+  textShadow: true, // Text shadow toggle.
   textShadowEdit: true, // Toggles text shadow control within the editor.
   watermarkAlpha: 1, // Opacity of watermark image.
   watermarkMaxWidthRatio: 0.25, // Maximum allowed width of watermark (percentage of total canvas width).
@@ -55,7 +55,7 @@ var MEME_SETTINGS = {
   // NOTE: only populate the "data" attributes with base64 data when concerned about Cross-Origin requests...
   // Otherwise, just leave "data" attributes blank and allow images to load from your server.
   watermarkOpts: [
-    {text: 'Frontline', value: '<%= image_path("frontline.png") %>', data: '<%= asset_data_uri("frontline.png") %>'},
+    {text: 'Frontline', value: '<%= image_path("frontline.png") %>'}
   ],
 
   width: 755 // Canvas rendering width.

@@ -31,7 +31,8 @@ configure :build do
   puts "local build"
   set :url_prefix, ""
   set :absolute_prefix, ""
+  activate :relative_assets
   activate :asset_hash
-  activate :minify_javascript
+  #activate :minify_javascript
   activate :minify_css
 end
