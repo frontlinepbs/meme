@@ -47,15 +47,14 @@ var MEME_SETTINGS = {
   watermarkMaxWidthRatio: 0.25, // Maximum allowed width of watermark (percentage of total canvas width).
 
   // Path to the watermark image source, or blank for no watermark:
-  // Alternatively, use '<%= asset_data_uri("vox.png") %>' to populate the watermark with base64 data, avoiding Cross-Origin issues.
+  // Alternatively, use '<%= asset_data_uri("frontline.png") %>' to populate the watermark with base64 data, avoiding Cross-Origin issues.
   watermarkSrc: (localStorage && localStorage.getItem('meme_watermark')) || '<%= image_path("frontline.png") %>',
-  //watermarkSrc: (localStorage && localStorage.getItem('meme_watermark')) || '<%= image_path(".png") %>',
   
   // Watermark image options: set to empty array to disable watermark picker.
   // NOTE: only populate the "data" attributes with base64 data when concerned about Cross-Origin requests...
   // Otherwise, just leave "data" attributes blank and allow images to load from your server.
   watermarkOpts: [
-    {text: 'Frontline', value: '<%= image_path("frontline.png") %>'}
+    {text: 'Frontline', value: '<%= image_path("frontline.png") %>', data: '<%= asset_data_uri("frontline.png") %>'}
   ],
 
   width: 755 // Canvas rendering width.
